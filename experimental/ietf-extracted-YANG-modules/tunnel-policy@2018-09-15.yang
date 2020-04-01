@@ -665,10 +665,10 @@ tunnel-policy policy3
          }
        } //End of container applyAction
 
-     }
-
    } //End of container tunnelSelectorNodes
 
  } //End of list tunnelSelector
 
   } //End of container tunnelSelectors
+}
+}

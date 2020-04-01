@@ -6,7 +6,7 @@ module huawei-dhcp {
        prefix "inet";
     }
 
-        contact "leo.liubing@huawei.com" "loukunkun@huawei.com";
+        contact "leo.liubing@huawei.com, loukunkun@huawei.com";
         description "The module for implementing DHCP protocol";
         revision "2014-12-18";
 

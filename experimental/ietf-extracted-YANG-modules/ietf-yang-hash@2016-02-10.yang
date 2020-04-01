@@ -19,7 +19,7 @@ module ietf-yang-hash {
                <mailto:consultancy@vanderstok.org>
 
      Editor:   Andy Bierman
-               <mailto:andy@yumaworks.com>
+               <mailto:andy@yumaworks.com>";
 
   description
     "This module contains re-hash information for the CoMI protocol.
@@ -51,3 +51,4 @@ module ietf-yang-hash {
     reference
       "RFC XXXX: YANG Hash.";
   }
+}

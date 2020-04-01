@@ -177,6 +177,7 @@ module softwire {
         default "1";
         description
           "Used to add or delete a particular binding-entry.";
+      }
       leaf lifetime {
         type yang:timestamp;
         description
@@ -189,7 +190,7 @@ module softwire {
     description
       "Grouping 'nat-table' is not extended. It means that we are
       focusing on the provisioning of external IP address and port set;
-      other NAT-specific considerations are out of scope."
+      other NAT-specific considerations are out of scope.";
   }
 
   grouping map-rule-table {
@@ -349,9 +350,9 @@ module softwire {
             type boolean;
             default "1";
             description
-              "The format of lwB4 IPv6 address. If set to "1" indicates
+              "The format of lwB4 IPv6 address. If set to 1 indicates
               that the default mode for building the lwB4 IPv6 address
-              is used   ([I-D.ietf-softwire-lw4over6]); if set to "0", the
+              is used   ([I-D.ietf-softwire-lw4over6]); if set to 0, the
               lwB4 can use any address from the assigned IPv6 prefix.";
           }
           leaf binding-ipv4-addr {
@@ -456,3 +457,4 @@ module softwire {
       }
     }
   }
+}

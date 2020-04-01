@@ -35,7 +35,7 @@ module service-function {
      // RFC Ed.: update the date below with the date of RFC publication
      // and remove this note.
 
-  revision 2014-29-04 {
+  revision 2014-04-29 {
     description
     "Changes based on Opendaylight Testing.";
   }

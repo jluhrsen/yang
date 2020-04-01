@@ -56,7 +56,7 @@ submodule iana-geo-uri-type {
       + '(;crs=(wgs84|[-0-9a-zA-Z]+))?'
       + '(;u=[0-9]+(.[0-9]*)?)?'
       + '(;[-da-zA-Z]+'
-      + '(=(([-_.!~*'()[]:&+$da-zA-Z]*)(%[da-fA-F]{2})*)*)?)*';
+      + '(=(([-_.!~*()[]:&+$da-zA-Z]*)(%[da-fA-F]{2})*)*)?)*';
     }
     description
       "The geo-uri type reprents a Uniform Resource Identifier for

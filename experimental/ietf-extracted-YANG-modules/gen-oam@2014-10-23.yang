@@ -70,7 +70,7 @@ organization "IETF LIME (Layer Independent OAM Management in Multi-Layer Environ
 
  typedef MEP-address {
  type union {
-type yang:mac-address
+type yang:mac-address {
    type inet:ipv4-address;
    type inet:ipv6-address;
    }
@@ -78,19 +78,21 @@ type yang:mac-address
    "Defines addresses of different MEP
    types. IPv4, IPv6";
    }
+}
 
    typedef MEP-id {
    type union{
 type uint32 {
    range "1..8191";
 }
-type yang:mac-address
+type yang:mac-address {
     type inet:ipv4-address;
     type inet:ipv6-address;
 }
    description
    "Defines type for MEPID";
     }
+  }
 
    typedef Context-Identifier {
    type union {
@@ -150,7 +152,7 @@ grouping maintenance-stats {
 grouping interface-status {
        description
          "collection of interface related status";
-     leaf list interface-status{
+     list interface-status{
          key " admin-status, oper-status ";
        leaf admin-status {
          config false;
@@ -187,7 +189,7 @@ leaf sub-oper-status {
 mdDown;
  maDown;
 oamAppDown;
-pathDown;};
+pathDown;}
            description
 " This leaf specifies the reason why the MD operational
                status as mentioned by the leaf Oper-Status

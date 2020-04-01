@@ -166,7 +166,7 @@ module ietf-supa-l3vpn {
         }
 
         container bgp-attribute {
-          when "../../protocol-type = 'bgp'"
+          when "../../protocol-type = 'bgp'";
           leaf remote-as-number {
             type string {
               length "1..11";
@@ -185,8 +185,8 @@ module ietf-supa-l3vpn {
         }
 
         container igp-attribute {
-          when "../../protocol-type = 'ospf' or 'isis'
-           or 'rip' or 'static'"
+          when "../../protocol-type = 'ospf' or 'isis';
+           or 'rip' or 'static'";
           leaf protocol-id {
             type uint32 {
             }

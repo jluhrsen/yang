@@ -1,5 +1,5 @@
 module ietf-OPSAWG-ute-tunnel {
-    namespace namespace "urn:ietf:params:xml:ns:yang:ietf-OPSAWG-ute-tunnel";
+    namespace "urn:ietf:params:xml:ns:yang:ietf-OPSAWG-ute-tunnel";
     prefix ute-tunnel;
 
     import ietf-yang-types {prefix yang;}
@@ -12,11 +12,9 @@ module ietf-OPSAWG-ute-tunnel {
                 <mailto:lizhenbin@huawei.com>";
     description ;
     revision 2017-03-11{
-        description Initial version;
+        description "Initial version";
         reference ;
     }
-
-   enumeration
 
     typedef manage-protocol{
         type enumeration{
@@ -41,11 +39,11 @@ module ietf-OPSAWG-ute-tunnel {
         type enumeration{
             enum ne{
                 value 0;
-                description Tunnel is create and delete,modified by ne;
+                description "Tunnel is create and delete,modified by ne";
             }
             enum controller{
                 value 1;
-                description tunne is create,delete andmodified by controller;
+                description "tunne is create,delete andmodified by controller";
             }
         }
     }
@@ -68,11 +66,11 @@ module ietf-OPSAWG-ute-tunnel {
         type enumeration {
               enum up {
                    value 1;
-                   description indicates the tunnel is down .;
+                   description "indicates the tunnel is down .";
               }
               enum delete {
                     value 2;
-                    description indicates the tunnel is delete .;
+                    description "indicates the tunnel is delete .";
               }
         }
     }
@@ -80,16 +78,16 @@ module ietf-OPSAWG-ute-tunnel {
         type enumeration {
               enum update {
                    value 0;
-                   description indicates the tunnel lsp is update .;
+                   description "indicates the tunnel lsp is update .";
               }
               enum remove {
                     value 1;
-                    description indicates the tunnel lsp is remove .;
+                    description "indicates the tunnel lsp is remove .";
               }
         }
     }
 
-   Identities
+   // Identities
 
     identity tunl-type {
     }
@@ -100,7 +98,7 @@ module ietf-OPSAWG-ute-tunnel {
         base tunl-type;
     }
 
-   Groupings
+   // Groupings
 
     grouping src-or-dst{
         leaf ne-id{
@@ -112,7 +110,7 @@ module ietf-OPSAWG-ute-tunnel {
         }
     }
 
-   Main container of cfg
+   // Main container of cfg
 
     container ute-tunnel-cfg{
         container p2p-tunnel{
@@ -123,7 +121,7 @@ module ietf-OPSAWG-ute-tunnel {
                         type string {
                             length 1..64;
                         }
-                        description Tunnel Name;
+                        description "Tunnel Name";
                     }
                     leaf user-label{
                         type string {
@@ -158,7 +156,7 @@ module ietf-OPSAWG-ute-tunnel {
                         type manage-protocol;
                     }
                     leaf control-protocol {
-                            description The tunnel path's control protocol type;
+                            description "The tunnel path's control protocol type";
                         type control-protocol;
                         default pcep;
                     }
@@ -166,7 +164,7 @@ module ietf-OPSAWG-ute-tunnel {
                         type control-mode;
                     }
                     leaf adopt {
-                        description Tunnel is adopted by controller and can be relayed by services;
+                        description "Tunnel is adopted by controller and can be relayed by services";
                         type boolean;
                         default false;
                     }
@@ -223,7 +221,7 @@ module ietf-OPSAWG-ute-tunnel {
         }
     }
 
-   Main container of oper
+   // Main container of oper
 
     container ute-tunnel-oper{
         config false;
@@ -235,7 +233,7 @@ module ietf-OPSAWG-ute-tunnel {
                         type string {
                             length 1..64;
                         }
-                        description Tunnel Name;
+                        description "Tunnel Name";
                     }
                     leaf tunnel-type{
                         type identityref{
@@ -265,7 +263,7 @@ module ietf-OPSAWG-ute-tunnel {
         }
     }
 
-     notification
+    // notification
 
     notification tunnel-state-down{
         leaf tunnel-name{
@@ -303,4 +301,4 @@ module ietf-OPSAWG-ute-tunnel {
                     uses src-or-dst;
                 }
             }
-} <CODE ENDS>
+} // <CODE ENDS>

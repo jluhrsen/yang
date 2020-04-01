@@ -26,7 +26,7 @@ reference "draft-jacpra-lime-yang-ais";
 container oam-ais {
 description
 "This set of data definitions covers the proactive OAM Fault
-Management Alarm Indication Signal function.
+Management Alarm Indication Signal function.";
 
 leaf enabled {
 type boolean;
@@ -35,6 +35,7 @@ description
 "This attribute specifies whether transmission is enabled. The
 value 'true' indicates AIS transmission is enabled. The
 value 'false' indicates AIS transmission is disabled.";
+}
 
 leaf interval {
 type int8;
@@ -164,6 +165,7 @@ config false;
 description
 "The mep id of the device where the fault was detected ";
 
+}
 }
 }
 }

@@ -4,7 +4,7 @@ module ipfix-psamp {
 
   import yang-types { prefix yang; }
   import inet-types { prefix inet; }
-  import complex-types {prefix "ct"y; }
+  import complex-types {prefix "ct"; }
 
   description "Example IPFIX/PSAMP Configuration Data Model
      with complex types and typed instance identifiers";

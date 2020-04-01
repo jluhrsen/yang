@@ -13,8 +13,6 @@ module lora {
     contact
       "Alexander Pelov
      a@ackl.io";
-    "Ana Minaburo
-     ana@minaburo.com";
 
     description
       "This module contains a collection of YANG definitions for
@@ -31,7 +29,7 @@ module lora {
 
    <!--This version of this YANG module is part of
    draft-pelov-yang-lora; see the draft itself for
-   full legal notices.";-->
+   full legal notices.-->";
 
     revision 2015-11-01 {
       description

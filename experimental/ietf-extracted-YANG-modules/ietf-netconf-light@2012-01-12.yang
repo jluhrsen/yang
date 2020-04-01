@@ -69,3 +69,4 @@ module ietf-netconf-light {
     reference "RFC XXXX: Network Configuration Protocol for
                          Constrained Devices (NETCONF Light)";
   }
+}

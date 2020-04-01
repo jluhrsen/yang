@@ -41,12 +41,12 @@ module bfd {
   identity technology-sub-type {
     description
 " In BFD, different encapsulation types such as IP/UDP, PW-ACH can be employed.
-"technology-sub-type" further identifies the encapsulation type within the BFD.
+technology-sub-type further identifies the encapsulation type within the BFD.
 Technology sub-type is defined as an identity type. This allows different
 encapsulation types to augment BFD OAM YANG model to include encapsulation
 type specific extensions without redefining common BFD definitions.
 Instead of defining seperate models for each such encapsulation
-we define technology sub type. Technology subtype is associated at MEG level"     }
+we define technology sub type. Technology subtype is associated at MEG level";    }
 
 augment "/gen-oam:domains/gen-oam:domain/gen-oam:MAs/gen-oam:MA " {
        leaf technology-sub-type {
@@ -66,7 +66,7 @@ enum enabled(1);
 enum disabled(2);
 enum adminDown(3);
 enum down(4);
-};
+}
        description
          " Denotes the desired operational status of the BFD session.
 
@@ -91,7 +91,7 @@ enum down(4);
 enum up(1);
 enum down(2);
 enum adminDown(3);
-};
+}
         description
          " Denotes the actual operational status of the BFD session.
           If the value of bfdOperStatus is down(2), this value MUST
@@ -400,21 +400,21 @@ leaf bfdsess-authentication-type {
 augment
 "/gen-oam:cc/gen-oam:input " {
        list session-status {
-       key " bfdsess-status "
+       key " bfdsess-status ";
          leaf bfdsess-admin-status {
            type enumeration{
 enum enabled(1);
 enum disabled(2);
 enum adminDown(3);
 enum down(4);
-};
+}
          }
          leaf bfdsess-oper-status {
            type enumeration{
 enum up(1);
 enum down(2);
 enum adminDown(3);
-};
+}
          }
         leaf bfdsess-status {
            type uint32;
@@ -445,7 +445,7 @@ leaf bfdsess-dismap-index {
 augment
 "/gen-oam:cc/gen-oam:input " {
        list bfdsess-authentication {
- key"bfdsess-authentication-keyid,bfdsess-authentication-key ";
+ key "bfdsess-authentication-keyid,bfdsess-authentication-key ";
            leaf bfdsess-authentication-keyid {
           type uint32;
          }
@@ -464,7 +464,6 @@ leaf bfdSess-SrcAddr-Type {
 leaf bfdSess-DstAddr-Type {
              type uint32;
            }
-         }
 }
 
 augment
@@ -659,21 +658,21 @@ leaf bfdsess-authentication-type {
 augment
 "/gen-oam:cv/gen-oam:input " {
        list session-status {
-       key " bfdsess-status "
+       key " bfdsess-status ";
          leaf bfdsess-admin-status {
            type enumeration{
 enum enabled(1);
 enum disabled(2);
 enum adminDown(3);
 enum down(4);
-};
+}
          }
          leaf bfdsess-oper-status {
            type enumeration{
 enum up(1);
 enum down(2);
 enum adminDown(3);
-};
+}
          }
         leaf bfdsess-status {
            type uint32;
@@ -704,7 +703,7 @@ leaf bfdsess-dismap-index {
 augment
 "/gen-oam:cv/gen-oam:input " {
        list bfdsess-authentication {
- key"bfdsess-authentication-keyid,bfdsess-authentication-key ";
+ key "bfdsess-authentication-keyid,bfdsess-authentication-key ";
            leaf bfdsess-authentication-keyid {
           type uint32;
          }

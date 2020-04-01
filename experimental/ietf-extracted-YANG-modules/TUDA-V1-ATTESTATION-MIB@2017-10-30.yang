@@ -481,7 +481,7 @@ module TUDA-V1-ATTESTATION-MIB {
 
   container tudaV1SWIDTag {
   description
-    "see CoSWID and YANG SIWD module for now"
+    "see CoSWID and YANG SIWD module for now";
 
     leaf tudaV1SWIDTagCycles {
       type yang:counter32;
@@ -556,7 +556,7 @@ module TUDA-V1-ATTESTATION-MIB {
 
     container tudaV1TrapV2Cycles-tudaV1GeneralCycles {
       description
-       "TPD"
+       "TPD";
       leaf tudaV1GeneralCycles {
         type yang:counter32;
         description
@@ -569,7 +569,7 @@ module TUDA-V1-ATTESTATION-MIB {
 
     container tudaV1TrapV2Cycles-tudaV1AIKCertCycles {
       description
-       "TPD"
+       "TPD";
       leaf tudaV1AIKCertCycles {
         type yang:counter32;
         description
@@ -582,7 +582,7 @@ module TUDA-V1-ATTESTATION-MIB {
 
     container tudaV1TrapV2Cycles-tudaV1TSACertCycles {
       description
-       "TPD"
+       "TPD";
       leaf tudaV1TSACertCycles {
         type yang:counter32;
         description
@@ -595,7 +595,7 @@ module TUDA-V1-ATTESTATION-MIB {
 
     container tudaV1TrapV2Cycles-tudaV1SyncTokenCycles {
       description
-       "TPD"
+       "TPD";
       leaf tudaV1SyncTokenCycles {
         type yang:counter32;
         description
@@ -607,7 +607,7 @@ module TUDA-V1-ATTESTATION-MIB {
     }
     container tudaV1TrapV2Cycles-tudaV1SyncTokenInstances {
       description
-       "TPD"
+       "TPD";
       leaf tudaV1SyncTokenInstances {
         type yang:counter32;
         description
@@ -620,7 +620,7 @@ module TUDA-V1-ATTESTATION-MIB {
 
     container tudaV1TrapV2Cycles-tudaV1RestrictCycles {
       description
-       "TPD"
+       "TPD";
       leaf tudaV1RestrictCycles {
         type yang:counter32;
         description
@@ -633,7 +633,7 @@ module TUDA-V1-ATTESTATION-MIB {
 
     container tudaV1TrapV2Cycles-tudaV1MeasureCycles {
       description
-       "TPD"
+       "TPD";
       leaf tudaV1MeasureCycles {
         type yang:counter32;
         description
@@ -646,7 +646,7 @@ module TUDA-V1-ATTESTATION-MIB {
 
     container tudaV1TrapV2Cycles-tudaV1MeasureInstances {
       description
-       "TPD"
+       "TPD";
       leaf tudaV1MeasureInstances {
         type yang:counter32;
         description
@@ -659,7 +659,7 @@ module TUDA-V1-ATTESTATION-MIB {
 
     container tudaV1TrapV2Cycles-tudaV1VerifyTokenCycles {
       description
-       "TPD"
+       "TPD";
       leaf tudaV1VerifyTokenCycles {
         type yang:counter32;
         description
@@ -672,7 +672,7 @@ module TUDA-V1-ATTESTATION-MIB {
 
     container tudaV1TrapV2Cycles-tudaV1SWIDTagCycles {
       description
-       "TPD"
+       "TPD";
       leaf tudaV1SWIDTagCycles {
         type yang:counter32;
         description

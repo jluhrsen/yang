@@ -1,6 +1,3 @@
-//*************  DO-NOT EDIT  **************
-//*********** Auto-generated file ********** 
-
  module cisco-openconfig-if-aggregate-devs {
 
   prefix  "lagdevs";
@@ -70,7 +67,4 @@
   deviation /ocif:interfaces/ocif:interface/lag:aggregation/lag:lacp/lag:members/lag:member/lag:state/lag:counters/lag:lacp-tx-errors {
     deviate not-supported;
   }
-
-
 }
-//total deviations:8

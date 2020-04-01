@@ -704,7 +704,7 @@ module i2rs-rib {
           description
             "The egress interface must be an ethernet
              interface.Address resolution is not required
-             for this nexthop."
+             for this nexthop.";
 
         }
       }

@@ -79,32 +79,32 @@ module i2rs-service-topology {
                base svc-topo-flag-identity;
           }
               description "list of topology type
-              supported"
+              supported";
 
         }
      }
 
-     grouping service-topology attributes {
+     grouping service-topology-attributes {
         description
          "Grouping for the attribute for the
              service topology";
              leaf name {type string;
              description "name of service
-                     topology"};
+                     topology";}
              leaf composite-flag {
                type identityref {
                   base service-topology-types;}
                 description "other topologies
                 this topology is configured to
          be a composite of
-                (L3VPN, L2VPN, I2RS only)"
+                (L3VPN, L2VPN, I2RS only)";
              }
              leaf service-topo-id {
                      type leafref {
-                      path "/nw:network/nw:network-id"
+                      path "/nw:network/nw:network-id";
                       }
                       description
-                      "An absolute reference to a network topology instance."
+                      "An absolute reference to a network topology instance.";
                }
               leaf service-id-number {
                  type uint32;
@@ -113,7 +113,7 @@ module i2rs-service-topology {
              leaf node-node {
                 type unint32;
                 description "count of service level nodes
-                 in the network."
+                 in the network.";
                }
              leaf composite-flag-status {
                type identityref {
@@ -121,7 +121,7 @@ module i2rs-service-topology {
                 description "other topologies
                 this topology is currently a
          composite of
-                (L3VPN, L2VPN, I2RS only)"
+                (L3VPN, L2VPN, I2RS only)";
              }
      }
 
@@ -136,7 +136,7 @@ module i2rs-service-topology {
                 description "virtual network
                  node can be composite of the
                 topologies list
-                (L3VPN, L2VPN, I2RS only)"
+                (L3VPN, L2VPN, I2RS only)";
                }
               leaf service-node-id {
                type uint32;
@@ -149,7 +149,7 @@ module i2rs-service-topology {
                 description "other topologies
                 this topology is currewntly
          be a composite of
-                (L3VPN, L2VPN, I2RS only)"
+                (L3VPN, L2VPN, I2RS only)";
              }
      }
 
@@ -157,13 +157,15 @@ module i2rs-service-topology {
        leaf name {type string;
            description "name of
                service link";}
-       leaf link-id uint32;
+       leaf link-id {
+           type uint32;
+       }
        leaf svc-link-type {
                        type identityref {
                   base service-topology-types;}
                 description "other topologies
                 this link is current a composite of
-                (L3VPN, L2VPN, I2RS only)"
+                (L3VPN, L2VPN, I2RS only)";
              }
        leaf metric {
            type uint32;
@@ -184,13 +186,13 @@ module i2rs-service-topology {
                 description "other topologies
                 this link termination point is
                 part of
-                (L3VPN, L2VPN, I2RS only)"
+                (L3VPN, L2VPN, I2RS only)";
 
-          choice svc-tp-type
+          choice svc-tp-type {
                  case svc-tp-type-service {
                       description "network, node,
                        tp that supports this
-                       termination point"
+                       termination point";
                              leaf service-network-id {
                               type uint32; }
                              leaf service-node-id {
@@ -199,35 +201,42 @@ module i2rs-service-topology {
                                type uint32;}
                        }
                        case svc-tp-type-inet {
-                        leaf ip-address inet:ip-addresss;
+                           leaf ip-address {
+                               type inet:ip-addresss;
+                           }
                        }
                        case svc-tp-type-unnum {
                         leaf unnumbered-id {
                           type uint32;}}
                        }
                }
-
+          }
      }
 
-        augment /nw:network/nw:node
-   +--rw node-svc-attributes
-      +--rw name?        inet:domain-name
-      +--rw composite_flag*  flag-type
-              +--rw service-node-id  uint32
-              +--rw node-svc-type service-type
-              +--rw next-hop     [next-hop-id]
+//        augment /nw:network/nw:node
+//   +--rw node-svc-attributes
+//      +--rw name?        inet:domain-name
+//      +--rw composite_flag*  flag-type
+//              +--rw service-node-id  uint32
+//              +--rw node-svc-type service-type
+//              +--rw next-hop     [next-hop-id]
 
- augment /nw:network/nw:network-types
-       use service-topology-types
- augment /nw:network/nw:network
-       use service-topology-attributes
+ augment /nw:network/nw:network-types {
+       uses service-topology-types;
+ }
+ augment /nw:network/nw:network {
+       uses service-topology-attributes;
+ }
 
- augment /nw:network/nw:node
-       use node-svc-attribute
+ augment /nw:network/nw:node {
+       uses node-svc-attribute;
+ }
 
- augment /nw:network/nt:link:
-   uses service-link-attributes
+ augment /nw:network/nt:link: {
+   uses service-link-attributes;
+ }
 
-augment /nw:network/nw:node/nt:termination-point:
-   uses service-termination-point-attributes
+ augment /nw:network/nw:node/nt:termination-point: {
+   uses service-termination-point-attributes;
+ }
 } // module i2rs-service-topology

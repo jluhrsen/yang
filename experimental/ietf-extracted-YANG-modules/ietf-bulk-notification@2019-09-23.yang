@@ -51,7 +51,7 @@ module ietf-bulk-notification {
     description
       "Group related informations are added to the 'message-header' of
        the ietf-notification-messages to identify the group to which a
-       set of notifications belongs." and compression algorithms used by
-       the publisher.;
+       set of notifications belongs. and compression algorithms used by
+       the publisher.";
   }
 }

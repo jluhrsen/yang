@@ -1542,4 +1542,4 @@ module cisco-xr-openconfig-bgp-deviations {
   deviation /bgp:bgp/bgp:peer-groups/bgp:peer-group/bgp:state/bgp:send-community {
       deviate not-supported;
   }
-
+}
